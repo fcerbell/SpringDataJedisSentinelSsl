@@ -1,3 +1,4 @@
+/*
 package com.redis.SpringDataJedisSentinelSSL;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -12,34 +13,6 @@ import redis.clients.jedis.DefaultJedisClientConfig;
 
 @Configuration
 public class RedisConfiguration {
-    @Value("${spring.redis.ssl}")
-    private Boolean ssl;
-    @Value("${spring.redis.sentinel.master}")
-    private String master;
-    @Value("${spring.redis.sentinel.nodes}")
-    private String[] nodes;
-
-    @Bean
-    public RedisConnectionFactory redisConnectionFactory() {
-        System.out.println(master);
-        System.out.println(String.join("-", nodes));
-
-        DefaultJedisClientConfig masterConfig = DefaultJedisClientConfig.builder()
-                .user("acljedis").password("fizzbuzz").clientName("master-client").ssl(true)
-                .build();
-
-        DefaultJedisClientConfig sentinelConfig = DefaultJedisClientConfig.builder()
-                .user("sentinel").password("foobared").clientName("sentinel-client").ssl(false).build();
-RedisSentinelConfiguration rsc = new RedisSentinelConfiguration().addSentinel(new RedisNode());
-rsc.addSentinel();
-rsc.setMaster();
-rsc.
-
-
-        return new JedisConnectionFactory(rsc, masterConfig)
-    }
-
-    /*
     @Value("${spring.redis.host}")
     private String host;
     @Value("${spring.redis.port}")
@@ -60,5 +33,5 @@ rsc.
         template.setConnectionFactory(redisConnectionFactory());
         return template;
     }
-*/
 }
+*/

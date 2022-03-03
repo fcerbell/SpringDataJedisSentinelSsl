@@ -1,6 +1,6 @@
 spring:
   redis:
-    ssl: false
+    ssl: true
     sentinel:
       master: demo
       nodes: 35.241.128.88:8001, 35.195.137.104:8001, 35.241.197.84:8001
